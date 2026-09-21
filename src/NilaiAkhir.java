@@ -10,6 +10,16 @@ public class NilaiAkhir {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+        // Percobaan pertama menggunakan int, dengan contoh nilai
+        // praktikum=80, tugas=75, mid=70, finalNilai=85
+        // int akhirInt = 80 * 30 / 100 + 75 * 20 / 100 + 70 * 20 / 100 + 85 * 30 / 100;
+        // Hasil: 24 + 15 + 14 + 25 = 78, padahal versi double bisa
+        // menghasilkan angka desimal seperti 78.5 atau 79.1 tergantung nilainya.
+        // karena pembagian int selalu membuang bagian desimal
+        // di SETIAP komponen sebelum sempat dijumlahkan, jadi selisihnya makin
+        // menumpuk dan hasil akhirnya jadi tidak akurat. Makanya nilai dan bobot
+        // oleh karena itu wajib double, bukan int.
+
         System.out.print("Nilai praktikum : ");
         double praktikum = scanner.nextDouble();
 
