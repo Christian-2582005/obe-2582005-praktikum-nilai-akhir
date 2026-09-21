@@ -35,3 +35,13 @@ public class NilaiAkhir {
         double selisih = akhir - dibulatkan;
 
         boolean lulus = akhir >= 60;
+
+        System.out.println();
+        System.out.println("Nilai akhir = " + akhir);
+        System.out.println("Dibulatkan = " + dibulatkan);
+        System.out.println("Selisih = " + selisih);
+        System.out.println("Lulus = " + lulus);
+
+        scanner.close();
+    }
+}
