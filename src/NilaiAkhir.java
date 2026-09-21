@@ -11,13 +11,27 @@ public class NilaiAkhir {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Nilai praktikum : ");
-        int praktikum = scanner.nextInt();
+        double praktikum = scanner.nextDouble();
 
         System.out.print("Nilai tugas : ");
-        int tugas = scanner.nextInt();
+        double tugas = scanner.nextDouble();
 
         System.out.print("Nilai mid : ");
-        int mid = scanner.nextInt();
+        double mid = scanner.nextDouble();
 
         System.out.print("Nilai final : ");
-        int finalNilai = scanner.nextInt();
+        double finalNilai = scanner.nextDouble();
+
+        // Satu ekspresi tanpa kurung sama sekali.
+        // Tidak perlu kurung karena operator * dan / memang sudah dieksekusi
+        // lebih dulu daripada + oleh Java (precedence bawaan), jadi urutan
+        // perkalian-bobot per komponen otomatis benar tanpa perlu dipaksa pakai ().
+        double akhir = praktikum * BOBOT_PRAKTIKUM + tugas * BOBOT_TUGAS + mid * BOBOT_MID;
+
+        // Komponen final ditambahkan pakai augmented assignment
+        akhir += finalNilai * BOBOT_FINAL;
+
+        int dibulatkan = (int) akhir;
+        double selisih = akhir - dibulatkan;
+
+        boolean lulus = akhir >= 60;
