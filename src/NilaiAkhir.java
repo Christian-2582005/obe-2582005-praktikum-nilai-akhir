@@ -24,7 +24,7 @@ public class NilaiAkhir {
 
         // Satu ekspresi tanpa kurung sama sekali.
         // Tidak perlu kurung karena operator * dan / memang sudah dieksekusi
-        // lebih dulu daripada + oleh Java (precedence bawaan), jadi urutan
+        // lebih dulu daripada + oleh Java (yaitu precedence bawaan), jadi urutan
         // perkalian-bobot per komponen otomatis benar tanpa perlu dipaksa pakai ().
         double akhir = praktikum * BOBOT_PRAKTIKUM + tugas * BOBOT_TUGAS + mid * BOBOT_MID;
 
